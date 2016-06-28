@@ -157,7 +157,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="error.hpp" />
+    <ClInclude Include="gdi.hpp" />
     <ClInclude Include="main.hpp" />
+    <ClInclude Include="resource.hpp" />
+    <ClInclude Include="resource_ptr.hpp" />
     <ClInclude Include="utility.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
