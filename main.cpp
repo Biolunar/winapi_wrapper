@@ -1,4 +1,5 @@
 #include "main.hpp"
+#include "message.hpp"
 #include "gdi.hpp"
 
 #include <cstdlib>
@@ -19,13 +20,13 @@ namespace win
 		icon->load(nullptr, IDI_EXCLAMATION, ::GetSystemMetrics(SM_CXICON), ::GetSystemMetrics(SM_CYICON), load_flags::shared);
 		small_icon->load(nullptr, IDI_ASTERISK, ::GetSystemMetrics(SM_CXSMICON), ::GetSystemMetrics(SM_CYSMICON), load_flags::shared);
 
-		::PostQuitMessage(EXIT_SUCCESS);
+		post_quit_message(EXIT_SUCCESS);
 
 		::MSG msg = {0};
-		while (::GetMessageW(&msg, nullptr, 0, 0))
+		while (get_message(msg, nullptr, 0, 0))
 		{
-			::TranslateMessage(&msg);
-			::DispatchMessageW(&msg);
+			translate_message(msg);
+			dispatch_message(msg);
 		}
 
 		return static_cast<int>(msg.wParam);

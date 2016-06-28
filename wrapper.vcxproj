@@ -152,6 +152,7 @@
   <ItemGroup>
     <ClCompile Include="error.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="message.cpp" />
     <ClCompile Include="utility.cpp" />
     <ClCompile Include="winmain.cpp" />
   </ItemGroup>
@@ -159,6 +160,7 @@
     <ClInclude Include="error.hpp" />
     <ClInclude Include="gdi.hpp" />
     <ClInclude Include="main.hpp" />
+    <ClInclude Include="message.hpp" />
     <ClInclude Include="resource.hpp" />
     <ClInclude Include="resource_ptr.hpp" />
     <ClInclude Include="utility.hpp" />
