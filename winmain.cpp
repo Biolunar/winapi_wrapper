@@ -26,11 +26,11 @@ int WINAPI wWinMain(::HINSTANCE const instance, ::HINSTANCE const prev_instance,
 	}
 	catch (::std::exception const& e)
 	{
-		::MessageBoxW(nullptr, ::win::to_utf16(e.what()).c_str(), ::win::to_utf16(u8"WoodBar Exception").c_str(), MB_ICONERROR);
+		::MessageBoxW(nullptr, ::win::to_utf16(e.what()).c_str(), ::win::to_utf16(u8"Exception").c_str(), MB_ICONERROR);
 	}
 	catch (...)
 	{
-		::MessageBoxW(nullptr, ::win::to_utf16(u8"Unknown error.").c_str(), ::win::to_utf16(u8"WoodBar Exception").c_str(), MB_ICONERROR);
+		::MessageBoxW(nullptr, ::win::to_utf16(u8"Unknown error.").c_str(), ::win::to_utf16(u8"Exception").c_str(), MB_ICONERROR);
 	}
 
 	return EXIT_FAILURE;
